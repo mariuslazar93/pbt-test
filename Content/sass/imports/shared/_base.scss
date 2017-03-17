@@ -1,0 +1,42 @@
+/*************************************
+Main layout styling
+*************************************/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: $white;
+}
+
+.page-wrapper {
+    background-color: $black;
+}
+
+.page {
+    position: relative;
+    z-index: 10;
+    width: 75%;
+    margin: -7rem auto 0;
+}
+
+@media all and (max-width: $tablet) {
+    .page {
+        width: 90%;
+    }
+}
+@media all and (max-width: $mobile) {
+    .page {
+        width: 100%;
+        margin: 70px auto 0;
+        z-index: 0;
+    }
+}

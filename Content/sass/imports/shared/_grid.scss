@@ -1,0 +1,31 @@
+.columns {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &.h-c {
+        justify-content: center;
+    }
+
+    .col {
+        flex: 1;
+        padding: 10px;
+    }
+}
+@media all and (max-width: $tablet) {
+    .columns {
+        flex-wrap: wrap;
+
+        .col {
+            flex-basis: 50%;
+        }
+    }
+}
+@media all and (max-width: $mobile) {
+    .columns {
+        flex-direction: column;
+
+        .col {
+            flex-basis: 100%;
+        }
+    }
+}

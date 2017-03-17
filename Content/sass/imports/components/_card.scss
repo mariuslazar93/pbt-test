@@ -1,0 +1,26 @@
+.card {
+    &__body {
+        &.padded {
+            padding: 0 2rem;
+        }
+    }
+
+    &__title {
+        border-bottom: 2px solid $white;
+        padding-bottom: 1.6rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__subtitle {
+        display: block;
+        font-family: $serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    &__intro {
+        font-family: $sans-serif;
+        font-style: normal;
+    }
+}

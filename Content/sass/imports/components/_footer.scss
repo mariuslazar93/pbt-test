@@ -1,0 +1,44 @@
+.global-footer {
+    hr {
+        border: 1px solid $white;
+        margin-bottom: 0.2rem;
+        width: 100%;
+
+        &:nth-child(2) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    > ul {
+        margin-bottom: 3.2rem;
+
+        > li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 1rem 0;
+
+            &:not(:last-child)::after {
+                content: "|";
+                display: inline-block;
+                padding: 0 1rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: $mobile) {
+    .global-footer {
+        width: 90%;
+        margin: 0 auto;
+
+        > ul {
+            > li {
+                display: block;
+
+                &:not(:last-child)::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

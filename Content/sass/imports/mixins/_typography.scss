@@ -1,0 +1,58 @@
+/*************************************
+Typography
+*************************************/
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $sans-serif;
+    font-size: 1.5rem;
+}
+
+.h1,
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.h3,
+h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.53;
+    font-family: $serif;
+    font-style: italic;
+
+    &.large {
+        font-size: 1.8rem;
+        line-height: 1.38;
+    }
+}
+
+.primary-type {
+    font-family: $sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.secondary-type {
+    font-family: $serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@media all and (max-width: $tablet){
+  html{
+    font-size: 9px;
+  }
+}
+@media all and (max-width: $mobile){
+  html{
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,24 @@
+/*************************************
+This is a partial which contains all SASS files developed for the project.
+*************************************/
+
+//Mixins
+@import "imports/mixins/_variables";
+@import "imports/mixins/_typography";
+
+
+//Shared
+@import "imports/shared/_base";
+@import "imports/shared/_grid";
+@import "imports/shared/_buttons";
+@import "imports/shared/_form";
+@import "imports/shared/_utility";
+
+//Components
+@import "imports/components/_header";
+@import "imports/components/_social";
+@import "imports/components/_intro";
+@import "imports/components/_mosaic";
+@import "imports/components/_carousel";
+@import "imports/components/_card";
+@import "imports/components/_footer";

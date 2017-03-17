@@ -1,0 +1,205 @@
+.global-header {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    height: 100vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 0.7;
+    }
+
+    &__inner {
+        position: relative;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .logo-wrapper {
+        display: inline-block;
+
+        .logo {
+            width: 18rem;
+        }
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: space-around;
+        margin: 6rem auto;
+
+        li {
+            flex: 1 1 auto;
+            list-style-type: none;
+
+            a {
+                border-top: 2px solid $white;
+                border-bottom: 2px solid $white;
+                display: block;
+                padding: 2rem 0;
+                text-transform: uppercase;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    border-color: $orange;
+                }
+            }
+        }
+
+        &__trigger {
+            float: right;
+            margin: 15px 10px 0 0;
+            height: 37px;
+            padding: 5px;
+            z-index: 1000;
+            box-shadow: none;
+            border: none;
+            appearance: none;
+            outline: none;
+            background: none;
+            cursor: pointer;
+
+            &:hover {
+                span {
+                    background: $orange;
+
+                    &::after,
+                    &::before {
+                        background: $orange;
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                position: relative;
+                width: 33px;
+                height: 4px;
+                background: $white;
+                transition: all 0.2s ease;
+
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 4px;
+                    background: $white;
+                    left: 0;
+                }
+
+                &::before {
+                    top: -10px;
+                    transition: background 0.2s ease, transform 0.2s ease, top 0.3s ease 0.2s;
+                }
+
+                &::after {
+                    transition: background 0.2s ease, transform 0.2s ease, bottom 0.3s ease 0.2s;
+                    bottom: -10px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: $desktop) {
+    .global-header__inner {
+        position: absolute;
+        top: calc(50% - 3.5rem);
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media all and (max-width: $tablet) {
+    .global-header {
+        padding: 7rem 0 15rem;
+        height: auto;
+    }
+}
+
+@media all and (max-width: $mobile) {
+    .global-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: $black !important;
+        width: 100%;
+        height: 70px;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+
+        &::before {
+            display: none;
+        }
+
+        &__inner {
+            width: 100%;
+
+            .logo-wrapper {
+                max-width: 45px;
+                margin: 10px;
+                float: left;
+            }
+
+            .main-menu {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                margin: 0;
+                transform: translateX(100%);
+                transition: all 0.5s ease;
+                background: $black;
+
+                .open & {
+                    transform: translateX(0);
+                }
+
+                li {
+                    a {
+                        border: none;
+                        display: block;
+                        padding: 2rem 0;
+                        text-transform: uppercase;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            border-color: $orange;
+                        }
+                    }
+                }
+
+                &__trigger {
+                    .open & {
+                        span {
+                            background: none;
+
+                            &::before {
+                                top: 0;
+                                transform: rotate(45deg);
+                                transition: color 0.2s ease, top 0.2s ease, transform 0.3s ease 0.2s;
+                            }
+
+                            &::after {
+                                bottom: 0;
+                                transform: rotate(-45deg);
+                                transition: color 0.2s ease, bottom 0.2s ease, transform 0.3s ease 0.2s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.img-responsive {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.vh {
+    border: 0;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible-xs {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.float-right {
+    float: right;
+}
+
+.bg-white {
+    background-color: $white;
+    color: $black;
+}
+
+.padded-s {
+    padding: 0.8rem;
+}
+
+.spacer-top-xs {
+    margin-top: 0.4rem;
+}
+
+.spacer-top-s {
+    margin-top: 0.8rem;
+}
+
+.spacer-top-m {
+    margin-top: 1.6rem;
+}
+
+.spacer-top-l {
+    margin-top: 3.2rem;
+}
+
+.spacer-top-xl {
+    margin-top: 6.4rem;
+}
+
+.spacer-bottom-xs {
+    margin-bottom: 0.4rem;
+}
+
+.spacer-bottom-s {
+    margin-bottom: 0.8rem;
+}
+
+.spacer-bottom-m {
+    margin-bottom: 1.6rem;
+}
+
+.spacer-bottom-l {
+    margin-bottom: 3.2rem;
+}
+
+.spacer-bottom-xl {
+    margin-bottom: 6.4rem;
+}
+
+@media all and (max-width: $mobile) {
+    .hidden-xs {
+        display: none !important;
+    }
+
+    .visible-xs {
+        display: block !important;
+    }
+}
